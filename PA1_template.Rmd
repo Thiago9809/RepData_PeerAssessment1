@@ -1,6 +1,4 @@
----
-output: md_document
----
+
 Reproducible Research Course Project 1
 ========================================
 First we gonna loading and preprocessing the data
@@ -24,7 +22,7 @@ Then we gonna answer some questions about the data
 steps <- with(activity, aggregate(steps, by = list(date), FUN = sum, na.rm = TRUE))
 names(steps) <- c("date", "steps")
 ```
-```{rhistogram1, echo=TRUE, fig.width=10}
+```{r histogram1, echo=TRUE, fig.width=10}
 qplot(steps$steps,main = "Total number of steps taken per day", xlab = "Steps")
 ```
 ```{r}

@@ -47,6 +47,10 @@ Then we gonna answer some questions about the data
 
     qplot(steps$steps,main = "Total number of steps taken per day", xlab = "Steps")
 
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+
+![](PA1_template_files/figure-markdown_strict/histogram1-1.png)
+
     mean(steps$steps)
 
     ## [1] 9354.23
@@ -64,7 +68,7 @@ So, how we can see the mean of the total steps taken per day is 9354.23
     names(average_daily_activity) <- c("interval", "mean")
     qplot(average_daily_activity$interval, average_daily_activity$mean, geom = "line",ylab="Average number of steps", xlab="intervals")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
 
     average_daily_activity[which.max(average_daily_activity$mean), ]$interval
 
